@@ -25,7 +25,11 @@ while (true) {
     let option = prompt("--> Escolha uma operação: ")
     
     if(option == 1){
-        addTask({id: "t001",date: "15/01/2023", time: "10:00",desc: "teste 1"})
+        date = prompt('Digite a data de execução da tarefa (dd/mm/aaaa): ');
+        time = prompt('Digite a hora que a tarefa será executada (hh:mm): ');
+        desc = prompt('Digite a descrição da tarefa: ');
+
+        addTask({date: date, time: time,desc: desc})
         console.log("Tarefa adicionada com sucesso!")
     }
 
@@ -39,8 +43,7 @@ while (true) {
 
     else if(option == 3){
         let id = prompt("Digite o id da tarefa que deseja remover: ")
-        deleteTask(id)
-        console.log("Tarefa removida com sucesso!")
+        deleteTask(id) == false ? console.log('Não foi possível remover!') : console.log("Tarefa removida com sucesso!")
     }
 
     else if(option == 4){
