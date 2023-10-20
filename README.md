@@ -3,7 +3,7 @@ Projeto to-do list ...
 
 ## Estrutura do objeto `task`
 
-```ts
+~~~javascript
 task: {
   id: string
   desc: string,
@@ -13,4 +13,4 @@ task: {
   created_at: date,
   updated_at: date
 }
-```
+~~~
