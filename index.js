@@ -4,15 +4,59 @@ const editTask = require("./editTask")
 const getTask = require("./getTask")
 const listTasks = require("./listTasks")
 
-addTask({id: "t001",date: "15/01/2023", time: "10:00",desc: "teste 1"})
-addTask({id: "t002",date: "16/09/2023", time: "11:00",desc: "teste 2"})
-addTask({id: "t003",date: "17/02/2023", time: "12:00",desc: "teste 3"})
-addTask({id: "t004",date: "18/10/2023", time: "13:00",desc: "teste 4"})
+const prompt = require('prompt-sync')()
 
-editTask("t003",{desc: "teste ###", status:"*"})
+const menu = () => {
+    console.log(`
+    +-----------------------------------+
+    |\t   GERENCIADOR DE TAREFAS:  \t|
+    |\tADICIONAR TAREFA:..........1\t|
+    |\tEDITAR TAREFA:.............2\t|
+    |\tREMOVER TAREFA:............3\t|
+    |\tLISTAR TAREFAS:............4\t|
+    |\tLISTAR POR ID TAREFA:......5\t|
+    |\tSAIR:......................0\t|
+    +-----------------------------------+
+    `);
+}
 
-deleteTask("t004")
+while (true) {
+    menu();
+    let option = prompt("--> Escolha uma operação: ")
+    
+    if(option == 1){
+        addTask({id: "t001",date: "15/01/2023", time: "10:00",desc: "teste 1"})
+        console.log("Tarefa adicionada com sucesso!")
+    }
 
-listTasks()
+    else if(option == 2){
+        let id = prompt("Digite o id da tarefa que deseja editar: ")
+        let desc = prompt("Digite a nova descrição da tarefa: ")
+        let status = prompt("Digite o novo status da tarefa: ")
+        editTask(id,{desc: desc, status:status})
+        console.log("Tarefa editada com sucesso!")
+    }
 
-console.log(getTask("t002"))
+    else if(option == 3){
+        let id = prompt("Digite o id da tarefa que deseja remover: ")
+        deleteTask(id)
+        console.log("Tarefa removida com sucesso!")
+    }
+
+    else if(option == 4){
+        listTasks()
+    }
+
+    else if(option == 5){
+        let id = prompt("Digite o id da tarefa que deseja consultar: ")
+        console.log(getTask(id))
+    }
+
+    else if(option == 0){
+        break;
+    }
+
+    else{
+        console.log("ERRO: OPERAÇÃO INVÁLIDA");
+    }
+}
