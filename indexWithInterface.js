@@ -49,14 +49,15 @@ while (true) {
         console.log(`
         +--------------------------------------+
         |\t ESCOLHA O STATUS DA TAREFA \t|
-        |\tABERTA.....................1\t|
-        |\tPAUSADA....................2\t|
-        |\tCANCELADA..................3\t|
-        |\tFINALIZADA.................4\t|
+        |\tABERTA.....................0\t|
+        |\tPAUSADA....................1\t|
+        |\tCANCELADA..................2\t|
+        |\tFINALIZADA.................3\t|
         +--------------------------------------+
         `);
         let newStatus = prompt("--> ");
-        changeStatus(newStatus, +newId) == false ? console.log("Não foi possível atualizar o status") : console.log("Status atualizado com sucesso!!");
+        console.log(+newStatus)
+        changeStatus(+newStatus, newId) == false ? console.log("Não foi possível atualizar o status") : console.log("Status atualizado com sucesso!!");
 
     }
 
