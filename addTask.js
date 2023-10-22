@@ -16,7 +16,7 @@ const addTask = (task) => {
     console.log(`hora ${task.time} inválida!`);
     return false;
   }
-
+  // validar descrição
   if (typeof task.desc != "string" || task.desc.length<1){
     console.log("descrição inválida!")
     return false
