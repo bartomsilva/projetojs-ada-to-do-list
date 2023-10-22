@@ -36,7 +36,7 @@ const editTask = (idTask, updateTask) => {
   tasks[posTask].date = updateTask.date ?? tasks[posTask].date;
   tasks[posTask].time = updateTask.time ?? tasks[posTask].time;
   tasks[posTask].desc = updateTask.desc ?? tasks[posTask].desc;
-  tasks[posTask].updated_ad = new Date().toLocaleDateString("pt-br")
+  tasks[posTask].updated_at = new Date().toLocaleDateString("pt-br");
 
   return true;
 };
