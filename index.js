@@ -11,8 +11,8 @@ addTask({date: "15/01/2023", time: "10:00",desc: "teste 1"})
 // addTask({date: "18/10/2023", time: "13:00",desc: "teste 4"})
 
 // console.log(getTask(1))
-console.log(editTask(1,{desc: "teste ###", status:"*"}))
-changeStatus(3, 1)
+// console.log(editTask(1,{desc: "teste ###", status:"*"}))
+// changeStatus(3, 1)
 // console.log(getTask(1))
 
 listTasks()
