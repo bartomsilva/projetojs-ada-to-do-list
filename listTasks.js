@@ -6,7 +6,7 @@ const listTasks = () => {
     .sort((d1, d2) => convertDate(d2.date) - convertDate(d1.date))
     .forEach((task) => {
       console.log(`
-        id: ${task.id} - Status: ${task.status === "*" ? "finalizada" : "aberta"}
+        id: ${task.id} - Status: ${task.status}
         data: ${task.date} - hora: ${task.time}
         Descrição: ${task.desc}
       `);
