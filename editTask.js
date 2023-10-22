@@ -37,6 +37,8 @@ const editTask = (idTask, updateTask) => {
   tasks[posTask].time = updateTask.time ?? tasks[posTask].time;
   tasks[posTask].desc = updateTask.desc ?? tasks[posTask].desc;
   tasks[posTask].updated_ad = new Date().toLocaleDateString("pt-br")
+
+  return true;
 };
 
 module.exports = editTask;
