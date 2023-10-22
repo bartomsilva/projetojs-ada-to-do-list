@@ -1,16 +1,37 @@
 const tasks = require("./database/tasks");
-const createID = require('./createId')
+const createID = require("./createId");
 
 const addTask = (task) => {
-  const id = createID()
+  // validação dos dados de entrada
+  
+  // validar data
+  let regex = /^\d{2}\/\d{2}\/\d{4}$/;
+  if (!regex.test(task.date)) {
+    console.log(`data ${task.date} inválida!`);
+    return false;
+  }
+  // validar hora
+  regex = /^([01]\d|2[0-3]):([0-5]\d)$/;
+  if (!regex.test(task.time)) {
+    console.log(`hora ${task.time} inválida!`);
+    return false;
+  }
+
+  if (typeof task.desc != "string" || task.desc.length<1){
+    console.log("descrição inválida!")
+    return false
+  }
+
+  const id = createID();
+
   const newTask = {
     id,
     ...task,
     created_at: new Date(),
-    updated_at: new Date()
+    updated_at: new Date(),
   };
   tasks.push(newTask);
+  return true
 };
 
 module.exports = addTask;
-
