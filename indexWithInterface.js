@@ -31,8 +31,11 @@ while (true) {
         time = prompt('Digite a hora que a tarefa será executada (hh:mm): ');
         desc = prompt('Digite a descrição da tarefa: ');
 
-        addTask({ date: date, time: time, desc: desc });
-        console.log("Tarefa adicionada com sucesso!");
+        if (addTask({ date: date, time: time, desc: desc })){
+            console.log("Tarefa adicionada com sucesso!");
+        } else {
+            console.log("ocorreu um erro na inclusão")
+        }
     }
 
     else if (option == 2) {
@@ -40,8 +43,11 @@ while (true) {
         let desc = prompt("Digite a nova descrição da tarefa: ");
         let date = prompt("Digite a nova data da tarefa: ");
         let time = prompt("Digite o novo horário da tarefa: ");
-        editTask(id, { desc: desc, date: date, time: time });
-        console.log("Tarefa editada com sucesso!");
+        if(editTask(id, { desc: desc, date: date, time: time })){
+            console.log("Tarefa editada com sucesso!");
+        } else {
+            console.log("ocorreu um erro na atualização")
+        }
     }
 
     else if (option == 3) {
