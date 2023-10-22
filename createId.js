@@ -1,13 +1,10 @@
-const createID = () => {
-  const characters =
-    '!@#$&*ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
-  const passwordLength = 5
-  let password = 't'
+let ID = require('./database/id')
 
-  while (password.length < passwordLength) {
-    let position = Math.floor(Math.random() * characters.length)
-    password += characters[position]
-  }
+const createID = () => {
+  const passwordLength = -4
+
+  let password = ('t00' + ID).slice(passwordLength)
+  ID++
 
   return password
 }

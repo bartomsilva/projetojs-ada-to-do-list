@@ -1,7 +1,7 @@
 const tasks = require("./database/tasks");
 const statusBd = require('./database/status.db')
 
-const changeStatus = (num, idTask) => {
+const changeStatus = (idStatus, idTask) => {
     const posTask = tasks.findIndex((task) => task.id == idTask);
   
   if(posTask === -1) {
@@ -9,7 +9,7 @@ const changeStatus = (num, idTask) => {
     return false
   }
 
-    switch (num) {
+    switch (idStatus) {
         case 0:
             tasks[posTask].status = statusBd.statusOpen();
             break;
