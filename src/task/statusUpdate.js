@@ -1,5 +1,5 @@
-const tasks = require("./database/tasks");
-const statusBd = require('./database/status.db')
+const tasks = require("../database/tasks");
+const statusBd = require('../database/status.db')
 
 const changeStatus = (idStatus, idTask) => {
     const posTask = tasks.findIndex((task) => task.id == idTask);

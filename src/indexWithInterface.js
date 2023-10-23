@@ -1,10 +1,10 @@
-const addTask = require("./addTask")
-const deleteTask = require("./deleteTask")
-const editTask = require("./editTask")
-const getTask = require("./getTask")
-const listTasks = require("./listTasks")
-const changeStatus = require('./statusUpdate')
-const existID = require('./existID')
+const addTask = require("./task/addTask")
+const deleteTask = require("./task/deleteTask")
+const editTask = require("./task/editTask")
+const getTask = require("./task/getTask")
+const listTasks = require("./task/listTasks")
+const changeStatus = require('./task/statusUpdate')
+const existID = require('./functions/existID')
 
 const prompt = require('prompt-sync')()
 
