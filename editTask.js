@@ -1,7 +1,6 @@
 const tasks = require("./database/tasks");
 const changeStatus = require("./statusUpdate");
-const validateDate = require("./validateDate");
-const validateTime = require("./validateTime");
+const { validateTime, validateDate } = require("./validation");
 
 const editTask = (idTask, updateTask) => {
   // validar data
