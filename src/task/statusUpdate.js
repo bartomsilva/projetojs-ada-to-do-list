@@ -2,8 +2,9 @@ const tasks = require("../database/tasks");
 const statusBd = require('../database/status.db')
 
 const changeStatus = (idStatus, idTask) => {
-    const posTask = tasks.findIndex((task) => task.id == idTask);
-  
+    // const posTask = tasks.findIndex((task) => task.id == idTask);
+    const posTask = existID(idTask)
+
   if(posTask === -1) {
     console.log(`ID "${idTask}" inválido`)
     return false
