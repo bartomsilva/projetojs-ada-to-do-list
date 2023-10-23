@@ -1,5 +1,5 @@
-const validateTime = (hour) => {
-  const [hour, minutes] = hour.split(':')
+const validateTime = (time) => {
+  const [hour, minutes] = time.split(':')
 
   if (hour < 0 || hour > 23) {
     return false
