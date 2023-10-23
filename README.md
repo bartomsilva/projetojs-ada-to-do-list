@@ -9,7 +9,7 @@ task: {
   desc: string,
   date: date,
   time: date,
-  status: boolean
+  status: object,
   created_at: date,
   updated_at: date
 }
