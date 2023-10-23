@@ -1,6 +1,7 @@
 const tasks = require("./database/tasks");
 const changeStatus = require("./statusUpdate");
 const validateDate = require("./validateDate");
+const validateTime = require("./validateTime");
 
 const editTask = (idTask, updateTask) => {
   // validar data
@@ -21,6 +22,11 @@ const editTask = (idTask, updateTask) => {
     const regex = /^([01]\d|2[0-3]):([0-5]\d)$/;
     if (!regex.test(updateTask.time)) {
       console.log(`hora ${updateTask.time} inválida!`);
+      return false;
+    }
+
+    if(!validateTime(updateTask.time)){
+      console.log(`Hora "${updateTask.date}" inválida!`);
       return false;
     }
   }
