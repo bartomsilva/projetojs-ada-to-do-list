@@ -1,11 +1,19 @@
 const validateDate = (date) => {
-  const [dia, mes, ano] = date.split('/')
+  let [dia, mes, ano] = date.split('/')
   const regex = /^\d{2}\/\d{2}\/\d{4}$/;
 
+  dia = parseInt(dia);
+  mes = parseInt(mes) - 1; 
+  ano = parseInt(ano);
+
+  // data valida 
+  // base para chegar se é uma data válida.
+  var dataValida = new Date(ano, mes, dia);
+
   if (!regex.test(date) 
-  || (dia < 1 || dia > 31)
-  || (mes < 1 || mes > 12)){
-    console.log(`data ${date} inválida!`);
+  || (dataValida.getDate() != dia)
+  || (dataValida.getMonth() != mes)
+  || (dataValida.getFullYear() != ano)){
     return false;
   }
   return true
@@ -17,7 +25,6 @@ const validateTime = (time) => {
   if (!regex.test(time)
     || (hour < 0 || hour > 23)
     || (minutes < 0 || minutes > 59)  ) {
-    console.log(`hora ${time} inválida!`);
     return false;
   }
   return true
