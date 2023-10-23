@@ -2,6 +2,10 @@ const tasks = require("./database/tasks");
 //
 
 const listTasks = () => {
+  if (tasks.length === 0) {
+    return false;
+  }
+
   tasks
     .sort((d1, d2) => convertDate(d2.date) - convertDate(d1.date))
     .forEach((task) => {
@@ -11,6 +15,8 @@ const listTasks = () => {
         Descrição: ${task.desc}
       `);
     });
+
+    return true;
 };
 
 module.exports = listTasks;

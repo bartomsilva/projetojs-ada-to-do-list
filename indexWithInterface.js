@@ -102,7 +102,7 @@ while (true) {
     }
 
     else if (option == 5) {
-        listTasks()
+        if (!listTasks()) console.log("Não há tarefas cadastradas!")
     }
 
     else if (option == 6) {
