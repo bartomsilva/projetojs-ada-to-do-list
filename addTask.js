@@ -1,6 +1,8 @@
 const tasks = require("./database/tasks");
 const createID = require("./createId");
 const statusBd = require('./database/status.db')
+const validateDate = require("./validateDate");
+
 
 const addTask = (task) => {
   // validação dos dados de entrada
@@ -9,6 +11,11 @@ const addTask = (task) => {
   let regex = /^\d{2}\/\d{2}\/\d{4}$/;
   if (!regex.test(task.date)) {
     console.log(`data ${task.date} inválida!`);
+    return false;
+  }
+
+  if(!validateDate(task.date)){
+    console.log(`Data ${task.date} inválida!`);
     return false;
   }
   // validar hora
