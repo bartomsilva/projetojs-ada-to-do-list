@@ -1,6 +1,20 @@
 # TO-DO LIST
 Projeto to-do list ...
 
+## Organização das pastas
+![image](https://github.com/bartomsilva/projetojs-ada-to-do-list/assets/106079184/2b30d131-e761-4060-8081-930d7d76d58e)
+
+## Funcionalidades
+- [x] Adicionar tarefa
+- [x] Editar tarefa
+- [x] Excluir tarefa
+- [x] Listar todas tarefas
+- [x] Listar tarefa por id
+- [x] Pausar tarefa
+- [x] Cancelar tarefa
+- [x] Finalizar tarefa
+- [x] Reabrir tarefa
+      
 ## Estrutura do objeto `task`
 ~~~javascript
 task: {
@@ -8,7 +22,7 @@ task: {
   desc: string,
   date: string(data: dia/mês/ano),
   time: string (hora:minutos),
-  status: string (aberta/finalizada/pausada/canceçaçda),
+  status: string (aberta/finalizada/pausada/cancelada),
   created_at: date,
   updated_at: date
 }
@@ -31,3 +45,10 @@ https://github.com/bartomsilva/projetojs-ada-to-do-list/tree/main
 ```
   node indexWithInterface
 ```
+
+### Sobre os desenvolvedores: Equipe
+
+- Gabriel Francelino
+- Pablo Henrique
+- Bart Silva
+
