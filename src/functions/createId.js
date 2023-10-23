@@ -1,4 +1,4 @@
-let ID = require('./database/id')
+let ID = require('../database/id')
 
 const createID = () => {
   const passwordLength = -4
