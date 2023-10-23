@@ -27,7 +27,7 @@ https://github.com/bartomsilva/projetojs-ada-to-do-list/tree/main
 ```
   npm i
 ````  
-4) Para efeturar os estes utillize o comando:
+4) Para efeturar os testes utillize o comando:
 ```
   node indexWithInterface
 ```
