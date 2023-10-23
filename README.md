@@ -21,13 +21,13 @@ https://github.com/bartomsilva/projetojs-ada-to-do-list/tree/main
 ``` 
 2) Abra o terminal do windows em uma pasta de sua preferência para fazer o clone do projeto com o seguinte comando:
 ```
-  git clone coloe-aqui-o-link-acima
+  git clone cole-aqui-o-link-acima
 ```
-3) Entre na nova pasta que foi criada após o Clone e digite o seguinte comando:
+3) Entre na nova pasta que foi criada após o Clone em seguida na pasta src e digite o seguinte comando:
 ```
   npm i
 ````  
-4) Para efeturar os testes utillize o comando:
+4) Para efeturar os testes utillize o comando dentro da pasta src:
 ```
   node indexWithInterface
 ```
