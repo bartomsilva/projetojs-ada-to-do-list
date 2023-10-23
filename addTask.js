@@ -2,6 +2,7 @@ const tasks = require("./database/tasks");
 const createID = require("./createId");
 const statusBd = require('./database/status.db')
 const validateDate = require("./validateDate");
+const validateTime = require("./validateTime");
 
 
 const addTask = (task) => {
@@ -24,6 +25,12 @@ const addTask = (task) => {
     console.log(`hora ${task.time} inválida!`);
     return false;
   }
+
+  if(!validateTime(task.time)){
+    console.log(`Hora "${task.date}" inválida!`);
+    return false;
+  }
+
   // validar descrição
   if (typeof task.desc != "string" || task.desc.length<1){
     console.log("descrição inválida!")
