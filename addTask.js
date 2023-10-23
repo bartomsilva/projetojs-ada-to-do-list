@@ -1,8 +1,7 @@
 const tasks = require("./database/tasks");
 const createID = require("./createId");
 const statusBd = require('./database/status.db')
-const validateDate = require("./validateDate");
-const validateTime = require("./validateTime");
+const { validateTime, validateDate } = require("./validation");
 
 
 const addTask = (task) => {
