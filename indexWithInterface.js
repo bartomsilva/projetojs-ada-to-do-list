@@ -46,10 +46,33 @@ while (true) {
             continue
         }
 
-        let desc = prompt("Digite a nova descrição da tarefa: ");
-        let date = prompt("Digite a nova data da tarefa: ");
-        let time = prompt("Digite o novo horário da tarefa: ");
-        if(editTask(id, { desc: desc, date: date, time: time })){
+        console.log(`
+        +-----------------------------------------------+
+        |\t       O QUE VOCÊ QUER EDITAR        \t|
+        +                                               +
+        |\t[0] DATA [1] HORÁRIO [2] DESCRIÇÃO:\t|
+        +-----------------------------------------------+
+        `);
+        let editOption = prompt("--> ");
+        let editedTask = {};
+        if (editOption == 0) {
+            let date = prompt("Digite a nova data da tarefa: ");
+            editedTask = { date: date };
+        }
+        else if(editOption == 1){
+            let time = prompt("Digite o novo horário da tarefa: ");
+            editedTask = { time: time };
+        }
+        else if(editOption == 2){
+            let desc = prompt("Digite a nova descrição da tarefa: ");
+            editedTask = { desc: desc };
+        }
+        else{
+            console.log("ERRO: OPÇÃO INVÁLIDA");
+            continue;
+        }
+
+        if(editTask(id, editedTask)){
             console.log("Tarefa editada com sucesso!");
         } else {
             console.log("ocorreu um erro na atualização")
@@ -59,13 +82,13 @@ while (true) {
     else if (option == 3) {
         let newId = prompt("Digite o id da tarefa: ");
         console.log(`
-        +--------------------------------------+
+        +---------------------------------------+
         |\t ESCOLHA O STATUS DA TAREFA \t|
         |\tABERTA.....................0\t|
         |\tPAUSADA....................1\t|
         |\tCANCELADA..................2\t|
         |\tFINALIZADA.................3\t|
-        +--------------------------------------+
+        +---------------------------------------+
         `);
         let newStatus = prompt("--> ");
         console.log(+newStatus)
@@ -84,7 +107,8 @@ while (true) {
 
     else if (option == 6) {
         let id = prompt("Digite o id da tarefa que deseja consultar: ")
-        console.log(getTask(id))
+        let returnedTask = getTask(id)
+        console.log(returnedTask)
     }
 
     else if (option == 0) {
