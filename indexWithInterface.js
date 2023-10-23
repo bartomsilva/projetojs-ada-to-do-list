@@ -35,14 +35,14 @@ while (true) {
         if (addTask({ date: date, time: time, desc: desc })){
             console.log("Tarefa adicionada com sucesso!");
         } else {
-            console.log("ocorreu um erro na inclusão")
+            console.log("Ocorreu um erro na inclusão!")
         }
     }
 
     else if (option == 2) {
         let id = prompt("Digite o id da tarefa que deseja editar: ");
         if(!existID(id)){
-            console.log(`\nID "${id}" inválido`)
+            console.log(`\nID "${id}" inválido!`)
             continue
         }
 
@@ -68,14 +68,14 @@ while (true) {
             editedTask = { desc: desc };
         }
         else{
-            console.log("ERRO: OPÇÃO INVÁLIDA");
+            console.log("ERRO: OPÇÃO INVÁLIDA!");
             continue;
         }
 
         if(editTask(id, editedTask)){
             console.log("Tarefa editada com sucesso!");
         } else {
-            console.log("ocorreu um erro na atualização")
+            console.log("Ocorreu um erro na atualização!")
         }
     }
 
@@ -92,7 +92,7 @@ while (true) {
         `);
         let newStatus = prompt("--> ");
         console.log(+newStatus)
-        changeStatus(+newStatus, newId) == false ? console.log("Não foi possível atualizar o status") : console.log("Status atualizado com sucesso!!");
+        changeStatus(+newStatus, newId) == false ? console.log("Não foi possível atualizar o status!") : console.log("Status atualizado com sucesso!");
 
     }
 

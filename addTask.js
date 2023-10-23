@@ -9,18 +9,18 @@ const addTask = (task) => {
   
   // validar data
   if(!validateDate(task.date)){
-    console.log(`Data ${task.date} inválida!`);
+    console.log(`Data "${task.date}" inválida!`);
     return false;
   }
   // validar hora
   if(!validateTime(task.time)){
-    console.log(`Hora "${task.date}" inválida!`);
+    console.log(`Hora "${task.time}" inválida!`);
     return false;
   }
 
   // validar descrição
   if (typeof task.desc != "string" || task.desc.length<1){
-    console.log("descrição inválida!")
+    console.log("Descrição inválida!")
     return false
   }
 
