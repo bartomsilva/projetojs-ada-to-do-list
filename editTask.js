@@ -4,13 +4,7 @@ const { validateTime, validateDate } = require("./validation");
 
 const editTask = (idTask, updateTask) => {
   // validar data
-  if (updateTask.date) {
-    const regex = /^\d{2}\/\d{2}\/\d{4}$/;
-    if (!regex.test(updateTask.date)) {
-      console.log(`data ${updateTask.date} inválida!`);
-      return false;
-    }
-
+  if (updateTask.date) {   
     if(!validateDate(updateTask.date)){
       console.log(`Data ${updateTask.date} inválida!`);
       return false;
@@ -18,12 +12,6 @@ const editTask = (idTask, updateTask) => {
   }
   // validar hora
   if (updateTask.time) {
-    const regex = /^([01]\d|2[0-3]):([0-5]\d)$/;
-    if (!regex.test(updateTask.time)) {
-      console.log(`hora ${updateTask.time} inválida!`);
-      return false;
-    }
-
     if(!validateTime(updateTask.time)){
       console.log(`Hora "${updateTask.date}" inválida!`);
       return false;

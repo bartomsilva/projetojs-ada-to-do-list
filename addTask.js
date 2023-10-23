@@ -8,23 +8,11 @@ const addTask = (task) => {
   // validação dos dados de entrada
   
   // validar data
-  let regex = /^\d{2}\/\d{2}\/\d{4}$/;
-  if (!regex.test(task.date)) {
-    console.log(`data ${task.date} inválida!`);
-    return false;
-  }
-
   if(!validateDate(task.date)){
     console.log(`Data ${task.date} inválida!`);
     return false;
   }
   // validar hora
-  regex = /^([01]\d|2[0-3]):([0-5]\d)$/;
-  if (!regex.test(task.time)) {
-    console.log(`hora ${task.time} inválida!`);
-    return false;
-  }
-
   if(!validateTime(task.time)){
     console.log(`Hora "${task.date}" inválida!`);
     return false;
