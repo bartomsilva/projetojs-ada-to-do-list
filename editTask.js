@@ -6,7 +6,7 @@ const editTask = (idTask, updateTask) => {
   // validar data
   if (updateTask.date) {   
     if(!validateDate(updateTask.date)){
-      console.log(`Data ${updateTask.date} inválida!`);
+      console.log(`Data "${updateTask.date}" inválida!`);
       return false;
     }
   }
@@ -20,7 +20,7 @@ const editTask = (idTask, updateTask) => {
   // validar descrição
   if (updateTask.desc) {
     if (typeof updateTask.desc != "string" || updateTask.desc.length < 1) {
-      console.log("descrição inválida!");
+      console.log("Descrição inválida!");
       return false;
     }
   }
@@ -28,7 +28,7 @@ const editTask = (idTask, updateTask) => {
   const posTask = tasks.findIndex((task) => task.id == idTask);
 
   if (posTask === -1) {
-    console.log(`ID "${idTask}" inválido`);
+    console.log(`ID "${idTask}" inválido!`);
     return false;
   }
 

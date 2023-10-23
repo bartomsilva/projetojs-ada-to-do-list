@@ -13,7 +13,7 @@ const validateDate = (date) => {
   if (!regex.test(date) 
   || (dataValida.getDate() != dia)
   || (dataValida.getMonth() != mes)
-  || (dataValida.getFullYear() != ano)){
+  || (dataValida.getFullYear() != ano || ano < 2023)){
     return false;
   }
   return true
