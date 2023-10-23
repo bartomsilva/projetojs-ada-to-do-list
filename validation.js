@@ -8,7 +8,7 @@ const validateDate = (date) => {
 
   // data valida 
   // base para chegar se é uma data válida.
-  var dataValida = new Date(ano, mes, dia);
+  const dataValida = new Date(ano, mes, dia);
 
   if (!regex.test(date) 
   || (dataValida.getDate() != dia)
