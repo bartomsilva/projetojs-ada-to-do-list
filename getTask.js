@@ -4,8 +4,7 @@ const getTask = (idTask) => {
   const response = tasks.filter((task) => task.id === idTask);
 
   if(response.length === 0){
-    console.log('Task não encontrada')
-    return undefined
+    return 'Task não encontrada'
   }
 
   return response;

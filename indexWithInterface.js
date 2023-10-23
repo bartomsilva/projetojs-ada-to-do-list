@@ -4,6 +4,7 @@ const editTask = require("./editTask")
 const getTask = require("./getTask")
 const listTasks = require("./listTasks")
 const changeStatus = require('./statusUpdate')
+const existID = require('./existID')
 
 const prompt = require('prompt-sync')()
 
@@ -40,6 +41,11 @@ while (true) {
 
     else if (option == 2) {
         let id = prompt("Digite o id da tarefa que deseja editar: ");
+        if(!existID(id)){
+            console.log(`\nID "${id}" inválido`)
+            continue
+        }
+
         let desc = prompt("Digite a nova descrição da tarefa: ");
         let date = prompt("Digite a nova data da tarefa: ");
         let time = prompt("Digite o novo horário da tarefa: ");
