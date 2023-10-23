@@ -1,5 +1,4 @@
 const tasks = require("../database/tasks");
-const changeStatus = require("../task/statusUpdate");
 const { validateTime, validateDate } = require("../functions/validation");
 
 const editTask = (idTask, updateTask) => {
@@ -25,7 +24,8 @@ const editTask = (idTask, updateTask) => {
     }
   }
   
-  const posTask = tasks.findIndex((task) => task.id == idTask);
+  // const posTask = tasks.findIndex((task) => task.id == idTask);
+  const posTask = existID(idTask)
 
   if (posTask === -1) {
     console.log(`ID "${idTask}" inválido!`);
