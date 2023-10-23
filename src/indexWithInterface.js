@@ -41,7 +41,7 @@ while (true) {
 
     else if (option == 2) {
         let id = prompt("Digite o id da tarefa que deseja editar: ");
-        if(existID(id)<0){
+        if(!existID(id)){
             console.log(`\nID "${id}" inválido!`)
             continue
         }
@@ -102,7 +102,7 @@ while (true) {
     }
 
     else if (option == 5) {
-        listTasks()
+        if (!listTasks()) console.log("Não há tarefas cadastradas!")
     }
 
     else if (option == 6) {
