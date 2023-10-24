@@ -1,5 +1,5 @@
 const tasks = require("../database/tasks");
-const statusBd = require('../database/status.db');
+const statusBd = require('../functions/status.db');
 const existID = require('../functions/existID');
 
 const changeStatus = (idStatus, idTask) => {
@@ -25,7 +25,7 @@ const changeStatus = (idStatus, idTask) => {
             tasks[posTask].status = statusBd.statusFinalized();
             break;
         default:
-            break;
+            return false;
     }
 }
 

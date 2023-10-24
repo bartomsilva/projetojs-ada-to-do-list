@@ -1,9 +1,8 @@
 let ID = require('../database/id')
 
 const createID = () => {
-  const passwordLength = -4
 
-  let password = ('t00' + ID).slice(passwordLength)
+  let password = 't00' + ID
   ID++
 
   return password
