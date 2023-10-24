@@ -1,5 +1,5 @@
 const tasks = require("../database/tasks");
-const statusBd = require('../database/status.db')
+const statusBd = require('../functions/status.db')
 const createID = require("../functions/createId");
 const { validateTime, validateDate } = require("../functions/validation");
 
