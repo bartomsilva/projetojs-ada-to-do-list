@@ -57,14 +57,26 @@ while (true) {
         let editedTask = {};
         if (editOption == 0) {
             let date = prompt("Digite a nova data da tarefa: ");
+            if (date == "") {
+                console.log("ERRO: DATA INVÁLIDA!")
+                continue
+            }
             editedTask = { date: date };
         }
         else if(editOption == 1){
             let time = prompt("Digite o novo horário da tarefa: ");
+            if (time == "") {
+                console.log("ERRO: HORÁRIO INVÁLIDO!")
+                continue
+            }
             editedTask = { time: time };
         }
         else if(editOption == 2){
             let desc = prompt("Digite a nova descrição da tarefa: ");
+            if (desc == "") {
+                console.log("ERRO: DESCRIÇÃO INVÁLIDA!")
+                continue
+            }
             editedTask = { desc: desc };
         }
         else{
