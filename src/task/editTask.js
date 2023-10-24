@@ -13,7 +13,7 @@ const editTask = (idTask, updateTask) => {
   // validar hora
   if (updateTask.time) {
     if(!validateTime(updateTask.time)){
-      console.log(`Hora "${updateTask.date}" inválida!`);
+      console.log(`Hora "${updateTask.time}" inválida!`);
       return false;
     }
   }
