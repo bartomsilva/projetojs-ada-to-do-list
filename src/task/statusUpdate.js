@@ -1,14 +1,15 @@
 const tasks = require("../database/tasks");
-const statusBd = require('../database/status.db')
+const statusBd = require('../database/status.db');
+const existID = require('../functions/existID');
 
 const changeStatus = (idStatus, idTask) => {
     // const posTask = tasks.findIndex((task) => task.id == idTask);
     const posTask = existID(idTask)
 
-  if(posTask === -1) {
-    console.log(`ID "${idTask}" inválido`)
-    return false
-  }
+    if (posTask === -1) {
+        console.log(`ID "${idTask}" inválido`)
+        return false
+    }
 
     switch (idStatus) {
         case 0:
