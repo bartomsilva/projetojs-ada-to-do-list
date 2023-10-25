@@ -120,7 +120,11 @@ while (true) {
     else if (option == 6) {
         let id = prompt("Digite o id da tarefa que deseja consultar: ")
         let returnedTask = getTask(id)
-        console.log(returnedTask)
+        if(returnedTask.length){
+            console.log(returnedTask)
+        } else {
+            console.log("Tarefa não localizada")
+        }
     }
 
     else if (option == 0) {

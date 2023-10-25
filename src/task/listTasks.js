@@ -1,5 +1,4 @@
 const tasks = require("../database/tasks");
-//
 
 const listTasks = () => {
   if (tasks.length === 0) {
