@@ -2,7 +2,7 @@
 Projeto to-do list ...
 
 ## Organização das pastas
-![image](https://github.com/bartomsilva/projetojs-ada-to-do-list/assets/106079184/2b30d131-e761-4060-8081-930d7d76d58e)
+![image](https://github.com/bartomsilva/projetojs-ada-to-do-list/assets/106079184/6c676238-d5d8-4444-9b11-12f9ef2277ee)
 
 ## Funcionalidades
 - [x] Adicionar tarefa
@@ -18,7 +18,7 @@ Projeto to-do list ...
 ## Estrutura do objeto `task`
 ~~~javascript
 task: {
-  id: string
+  id: string 
   desc: string,
   date: string(data: dia/mês/ano),
   time: string (hora:minutos),
