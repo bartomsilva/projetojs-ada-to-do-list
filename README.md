@@ -31,7 +31,7 @@ task: {
 ## Para executar este projeto 
 1) copie o link abaixo:
 ```
-https://github.com/bartomsilva/projetojs-ada-to-do-list/tree/main
+https://github.com/bartomsilva/projetojs-ada-to-do-list.git
 ``` 
 2) Abra o terminal do windows em uma pasta de sua preferência para fazer o clone do projeto com o seguinte comando:
 ```
