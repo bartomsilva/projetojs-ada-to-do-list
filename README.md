@@ -54,9 +54,9 @@ https://github.com/bartomsilva/projetojs-ada-to-do-list.git
 ```
   npm i
 ````  
-4) Para efeturar os testes utillize o comando dentro da pasta src:
+4) Para efeturar os testes utillize o comando abaixo:
 ```
-  node indexWithInterface
+  npm start
 ```
 Será exibirá a seguinte tela:<br>
 
